@@ -80,10 +80,11 @@ Mark Peterson
 \code{\link{calcBasicDE}}
 }
 \examples{
+## Only run if DESeq is available
+if(require(DESeq)){
 
 ## Create sample data
 ## Could be reads or FPKM from your input
-require(DESeq)
 exampleCounts <- counts(makeExampleCountDataSet())
 
 
@@ -91,7 +92,7 @@ testComb <- calcCombVals(exampleCounts,
                          groupID=c("A","B","*"),
                          colID=c("all"))
 head(testComb)
-
+}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

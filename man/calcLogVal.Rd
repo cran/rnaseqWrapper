@@ -48,9 +48,11 @@ Mark Peterson
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
+## Only run if DESeq is available
+if(require(DESeq)){
+
 ## Create sample data
 ## Could be reads or FPKM from your input
-require(DESeq)
 exampleCounts <- counts(makeExampleCountDataSet())
 
 ## Only calculate for the "2" columns
@@ -66,6 +68,7 @@ testLog2 <- calcLogVal(exampleCounts,
                        setBase=2)
 head(testLog2)
 
+}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

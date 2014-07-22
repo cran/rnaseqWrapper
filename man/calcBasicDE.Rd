@@ -88,9 +88,12 @@ Mark Peterson
 }
 \examples{
 
+## Only run if DESeq is available
+if(require(DESeq)){
+
 ## Create sample data
 ## Could be reads or FPKM from your input
-require(DESeq)
+
 exampleCounts <- counts(makeExampleCountDataSet())
 
 
@@ -102,6 +105,9 @@ head(testComb)
 basicTest <- calcBasicDE(testComb,"all_mean")
 
 head(basicTest)
+
+}
+
 
 
 }

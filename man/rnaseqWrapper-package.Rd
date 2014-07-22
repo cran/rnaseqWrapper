@@ -15,8 +15,8 @@ please see our repository at https://bitbucket.org/petersmp/rnaseqwrapper/
 \tabular{ll}{
 Package: \tab rnaseqWrapper\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-12-06\cr
+Version: \tab 1.0-1\cr
+Date: \tab 2014-07-22\cr
 License: \tab GPL\cr
 }
 %~~ An overview of how to use the package, including the most important functions ~~

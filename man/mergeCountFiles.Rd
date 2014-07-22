@@ -77,7 +77,10 @@
 \examples{
   
 ## Find where the data is stored (or use your own)
-pathToData <- system.file("",package="rnaseqWrapper",mustWork=TRUE)
+pathToData <- try(system.file("",package="rnaseqWrapper",mustWork=TRUE))
+
+if(class(pathToData) != "try-error"){
+## Make sure the data were found before proceeding
 
 ## Read in the data
 ## Note, the files here are compressed,
@@ -87,7 +90,7 @@ testCountData <- mergeCountFiles(paste(pathToData,"/data/",sep=""),".genes.resul
 ## Display the contents
 head(testCountData)
 
-  
+}  
   
 \dontrun{
     ## On your data, it will look more like:

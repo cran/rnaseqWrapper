@@ -87,8 +87,10 @@ Mark Peterson
 
 \examples{
 
+## Only run if topGO is available
+if(require(topGO)){
+
 ## Load the sample data from topGO
-require(topGO)
 data(GOdata)
 
 ## Recreate the GO annotation
@@ -103,6 +105,7 @@ testOut <- runGOAnalysis(sigGenes(GOdata),
                          
 head(testOut)
 
+}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

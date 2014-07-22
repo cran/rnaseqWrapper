@@ -40,6 +40,9 @@ Mark Peterson
 
 \examples{
 
+## Only run if DESeq is available
+if(require(DESeq)){
+
 ## Create sample counts
 ## Thes could be the reads or FPKM from input data instead
 require(DESeq)
@@ -61,7 +64,7 @@ treatCol <- c("red","red","blue","blue","blue")
 
 plot(scores_ADNA[,1:2],pch=19,col=treatCol)
 
-
+}
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

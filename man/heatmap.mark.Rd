@@ -333,7 +333,10 @@ heatmap.mark (x,
 ######################################
 
 ## Find where the data is stored (or use your own)
-pathToData <- system.file("",package="rnaseqWrapper",mustWork=TRUE)
+pathToData <- try(system.file("",package="rnaseqWrapper",mustWork=TRUE))
+
+if(class(pathToData) != "try-error"){
+## Make sure the data were found before proceeding
 
 ## Read in the data
 ## Note, the files here are compressed,
@@ -401,6 +404,11 @@ heatmap.mark(as.matrix(toPlot),
              cexCol = 0.75,labRow = FALSE,
              scaleLabel = "",
              plotNew = FALSE)
+
+
+
+}
+
 
  
 }

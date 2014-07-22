@@ -1,7 +1,34 @@
-To install:
-===========
 
-- Download the tar.gz file from the "downloads" tab
+To install from CRAN
+====================
+
+This should download the rnaseqWrapper package and all of its
+smaller dependencies:
+
+	install.packages("rnaseqWrapper")
+
+However, the three larger dependencies,
+including two from Bioconductor,
+are not automatically installed,
+though you will be prompted to install them if
+you call a function that needs them.
+To install them on your own use:
+
+
+	install.packages("seqinr")
+
+	source("http://bioconductor.org/biocLite.R")
+	biocLite(c("DESeq","topGO"))
+
+Note that these are large packages, and may take a while to install.
+
+
+
+To install from this development version
+========================================
+
+- Download the tar.gz file from the "downloads" tab of the
+	 [Bitbucket repo](https://bitbucket.org/petersmp/rnaseqwrapper)
 - Open R, and setwd() to the location of the tar file
 - Run the following:
 
@@ -19,6 +46,19 @@ Code:
 	install.packages("rnaseqWrapper_1.0.tar.gz",repos=NULL,type="source")
 
 
+Version notes
+=============
+
+- **Development Version**
+	- No current development differences from the official CRAN release.
+
+- **Version 1.0-1**
+	- Minor update to the help pages to avoid running when a required package is not available.
+  
+- **Version 1.0**
+	- First official release version.
+
+
 To start using
 ==============
 
@@ -33,7 +73,8 @@ Available functions
 ===================
 
 I will write some sort of vignette in the near(ish) future (I hope).
-
+For now, here is a brief description of the functions,
+broken down by area.
 
 ### Merge count data ##
 

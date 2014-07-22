@@ -99,9 +99,10 @@ Mark Peterson
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
+## Only run if DESeq is available
+if(require(DESeq)){
 
 ## Create an example count data set
-require(DESeq)
 exampleCounts <- counts(makeExampleCountDataSet())[1:500,]
 
 ## Note, from your data, this might look like:
@@ -121,6 +122,7 @@ head(test$deOutputs$AvsB)
 head(test$normalizedReads)
 head(test$isSignificant)
 
+}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
